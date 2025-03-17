@@ -31,9 +31,9 @@ jobs:
           
           # Update wrangler.toml with secrets
           sed -i "s/your-database-id/$DATABASE_ID/" wrangler.toml
-          sed -i "s/\"\"/$CLIENT_ID/" wrangler.toml
-          sed -i "s/\"\"/$TENANT_ID/" wrangler.toml
-          sed -i "s/\"\"/$CLIENT_SECRET/" wrangler.toml
+          sed -i "s/\"\"/'$CLIENT_ID'/" wrangler.toml
+          sed -i "s/\"\"/'$TENANT_ID'/" wrangler.toml
+          sed -i "s/\"\"/'$CLIENT_SECRET'/" wrangler.toml
           
           # Deploy using Wrangler CLI
           wrangler deploy
