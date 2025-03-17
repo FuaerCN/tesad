@@ -3,7 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2023-12-01"
 
 [[d1_databases]]
-name = "msautocreate"
+binding = "DB"
 database_name = "msautocreate"
 database_id = "your-database-id"
 
