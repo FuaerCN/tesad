@@ -17,6 +17,32 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 app.use('*', cors());
 
+// 根路由返回静态HTML
+app.get('/', (c) => {
+  return c.html(`
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Microsoft Office 365 账号管理</title>
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100">
+      <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-md w-96">
+          <h1 class="text-2xl font-bold text-center mb-6">Office 365 账号管理</h1>
+          <div class="space-y-4">
+            <button onclick="window.location.href='/api/login'" class="w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200">管理员登录</button>
+            <button onclick="window.location.href='/api/account/create'" class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition duration-200">创建账号</button>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+  `);
+});
+
 // 配置信息
 const config: MSConfig = {
   clientId: '',
