@@ -1,0 +1,18 @@
+name = "msautocreate-worker"
+main = "src/index.ts"
+compatibility_date = "2023-12-01"
+
+[[d1_databases]]
+name = "msautocreate"
+database_name = "msautocreate"
+database_id = "your-database-id"
+
+[vars]
+CLIENT_ID = ""
+TENANT_ID = ""
+CLIENT_SECRET = ""
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "e10adc3949ba59abbe56e057f20f883e"
+
+[dev]
+port = 8787

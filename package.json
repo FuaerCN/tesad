@@ -1,0 +1,1 @@
+{"name":"msautocreate-worker","version":"1.0.0","description":"Microsoft Office 365 Account Creator on Cloudflare Workers","main":"src/index.js","scripts":{"dev":"wrangler dev","deploy":"wrangler deploy"},"author":"","license":"MIT","dependencies":{"@cloudflare/workers-types":"^4.20231218.0","hono":"^3.11.11"},"devDependencies":{"wrangler":"^3.22.1","typescript":"^5.3.3"}}
